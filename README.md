@@ -7,4 +7,6 @@
 ### Mijn doelgroep zijn bedrijven die opzoek zijn naar web developers
 
 
-### trello link: https://trello.com/b/7alUbONY/portfolio
+### Trello link: https://trello.com/b/7alUbONY/portfolio
+
+### FileZilla link: http://32831.hosts1.ma-cloud.nl/portfolio/
