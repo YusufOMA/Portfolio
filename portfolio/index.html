@@ -20,7 +20,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#over-mij">Over mij</a></li>
                 <li><a href="#verleden">Verleden</a></li>
-                <li><a href="#sites">Sites</a></li>
+                <li><a href="#filter">Filter</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button id="open-menu-btn"><i class="fa-solid fa-bars"></i></button>
@@ -29,6 +29,7 @@
     </nav>
 
     <header>
+        <section class="home" id="home"></section>
         <header class="neon">
             <!--circles-->
             <figure class="circle circle--first"></figure>
@@ -37,24 +38,21 @@
             <figure class="circle circle--fourth"></figure>
             <h1>Hallo, mijn naam is Yusuf!</h1>
             <ul class="cardss">
-                <li class="card--header">
-                    <div></div>
-                </li>
-                <li class="card--header"></li>
-                <li class="card--header"></li>
-                <li class="card--header"></li>
-                <li class="card--header"></li>
-                <li class="card--header"></li>
+                
+                <li class="card--header"><a href="http://32831.hosts1.ma-cloud.nl/"><img src="/img/blog.webp" alt="foto van een zelfgemaakte site"></li></a>
+                <li class="card--header"><a href="https://32778.hosts1.ma-cloud.nl/f1m2js/Duurzaam%20dashboard/"><img src="/img/dashboard.webp" alt="foto van een zelfgemaakte site"></li></a>
+                <li class="card--header"><a href="http://32831.hosts1.ma-cloud.nl/Japan/"><img src="/img/japan.webp" alt="foto van een zelfgemaakte site"></li></a>
             </ul>
         </header>
 
         </div>
     </header>
-
-    <section class="over-mij" id="over-mij">
+    <section>
+    <div class="over-mij" id="over-mij">
         <h2 class="border_bottom">Over mij</h2>
+    </section>
         <div class="container over-mij_container">
-
+        
         </div>
         <div class="over-mij-text">
             <div class="text">
@@ -62,16 +60,16 @@
             </div>
             <p>
                 Ik ben Yusuf Ozcelik en ik zit op het MediaCollege in Amsterdam. Ik zit nog in het opleiding
-                Software developer. Ik kan al veel dingen zoals een website maken of een website is echt mijn passie.
+                Software developer. Ik kan al veel dingen zoals een website maken of dingen heel erg goed stylen zie hieronder bij de filter.
                 Wat ik nog meer
                 heel leuk vind is samenwerken ik kan al heel goed samenwerken.</p>
-            <a href="https://github.com/YusufOMA/" class="btn">Github</a>
         </div>
         </div>
-    </section>
-
+    
+    <section></section>
     <div class="verleden" id="verleden">
         <h2 class="border_bottom">Mijn verleden</h2>
+        </section>
         <div class="container verleden_container">
             <div class="cards">
                 <div class="card">
@@ -110,18 +108,57 @@
 
 
 
-    <div class="container sites_container" id="sites">
-        <h2 class="border_bottom">sites</h2>
-        <div class="gallerij">
-            <a href="http://32831.hosts1.ma-cloud.nl/Japan/"><img src="img/japan.jpg" alt="Portfolio 1"></a>
-            <a href="http://32831.hosts1.ma-cloud.nl/"><img src="img/blog.jpg" alt="Portfolio 1"></a>
-            <a href="https://32778.hosts1.ma-cloud.nl/f1m2js/Duurzaam%20dashboard/"><img src="img/dashboard.png"
-                    alt="Portfolio 1"></a>
+<!--FILTER-->
+    
+    <div class="container sites_container" id="filter">
+        <h2 class="border_bottom">Filter</h2>
+         
 
         </div>
     </div>
+    
+    <main>
+        <section class="inputs">
+            <div>
+                <input id="checkbox-vr" type="checkbox" class="filter">
+                <label for="checkbox-vr" class="label">Vr</label>
+            </div>
 
-   
+            <div>    
+                <input id="checkbox-api" type="checkbox" class="filter">
+                <label for="checkbox-api" class="label">API</label>
+            </div>
+            <div>
+                <input id="checkbox-style" type="checkbox" class="filter">
+                <label for="checkbox-style" class="label">Style</label>
+            </div>
+            <div>
+                <input id="checkbox-sites" type="checkbox" class="filter">
+                <label for="checkbox-sites" class="label">Sites</label>
+            </div>
+            
+        </section>
+        <ul class="projects">
+            <li class="project" data-category="sites"><img src="/img/blog.webp" alt="foto van de game eldenring"></li>
+            <li class="project" data-category="sites"><img src="/img/dashboard.webp" alt="foto van de game fifa"></li>
+            <li class="project" data-category="sites"><img src="/img/japan.webp" alt="foto van de game spiderman"></li>
+            <li class="project" data-category="api"><img src="/img/api.webp" alt="foto van de game eldenring"></li>
+            <li class="project" data-category="style"><img src="/img/bal.webp" alt="foto van de game fifa"></li>
+            <li class="project" data-category="style"><img src="/img/nitendo.webp" alt="foto van de game spiderman"></li>
+            <li class="project" data-category="style"><img src="/img/uil.webp" alt="foto van de game eldenring"></li>
+            <li class="project" data-category="style"><img src="/img/oog.webp" alt="foto van de game spiderman"></li>
+            <li class="project" data-category="style"><img src="/img/post.webp" alt="foto van de game eldenring"></li>
+            <li class="project" data-category="style"><img src="/img/tijd.webp" alt="foto van de game fifa"></li>
+            <li class="project" data-category="style"><img src="/img/text.webp" alt="foto van de game spiderman"></li>
+            <li class="project" data-category="vr"><img src="/img/vr.webp" alt="foto van de game fifa"></li>
+            <li class="project" data-category="vr"><img src="/img/vr2.webp" alt="foto van de game fifa"></li>
+            
+            
+
+        </ul>
+    </main>
+
+
 
     <footer>
         <div class="container footer_container">
@@ -148,6 +185,7 @@
                 </ul>
             </div>
         </div>
+
 
     </footer>
 
