@@ -702,7 +702,7 @@ main{
 
 }
 
-.filter:checked ~ .label{
+.filter:checked ~ .label{          
     text-decoration: underline;
 }
 
