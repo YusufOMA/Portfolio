@@ -26,15 +26,22 @@
     transition: all 0.5s linear;
     scroll-behavior: smooth;
 }
-.p{
-    max-width: 80%;
+
+.tekst--header {
+    max-width: 90%;
+    padding-left: 17rem;
 }
 
-html{
+.typing {
+    color: var(--primary);
+    font-weight: 500;
+}
+
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 2rem;
     font-family: sans-serif;
     background: black;
@@ -43,7 +50,7 @@ body{
     background-color: var(--achtergrond);
 }
 
-.neon{
+.neon {
     height: 80rem;
     background: #252A34;
     display: flex;
@@ -57,12 +64,12 @@ body{
 
 }
 
-.circle{
+.circle {
     height: 40rem;
     width: 40rem;
     border-radius: 50%;
     position: absolute;
-    box-shadow: inset 0 0 3rem 0 rgba(0,0,0,0,6);
+    box-shadow: inset 0 0 3rem 0 rgba(0, 0, 0, 0, 6);
     animation-name: coloRotation;
     animation-duration: 30s;
     animation-direction: alternate;
@@ -70,31 +77,32 @@ body{
 
 }
 
-.circle--first{
+.circle--first {
     top: -10%;
     left: -10%;
     background: linear-gradient(#2FA4FF, #00FFDD);
 }
 
-.circle--second{
+.circle--second {
     right: -10%;
     top: -10%;
     background: linear-gradient(#49FF00, #77D970);
 }
-.circle--third{
+
+.circle--third {
     left: -10%;
     top: 50%;
     background: linear-gradient(#49FF00, #77D970);
 }
 
-.circle--fourth{
+.circle--fourth {
     right: -10%;
     top: 55%;
     background: linear-gradient(#2FA4FF, #00FFDD);
 }
 
 
-.neon h1{
+.neon h1 {
     color: white;
     font-size: 300%;
     animation-name: popup;
@@ -104,7 +112,7 @@ body{
     z-index: 1;
 }
 
-.cardss{
+.cardss {
     display: flex;
     height: 30rem;
     gap: 2rem;
@@ -113,7 +121,7 @@ body{
     align-items: center;
 }
 
-.card--header{
+.card--header {
     position: relative;
     width: 20rem;
     height: 20rem;
@@ -127,11 +135,11 @@ body{
     transition: 0.2s transform;
 }
 
-.card--header:hover{
+.card--header:hover {
     transform: scale(1.1);
 }
 
-.card--header::after{
+.card--header::after {
     content: "";
     color: white;
     background: white;
@@ -145,55 +153,97 @@ body{
     animation-duration: 30s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
-    
+
 }
 
-.card--header:nth-of-type(2){
+.card--header:nth-of-type(2) {
     animation-delay: 0.2s;
 }
-.card--header:nth-of-type(3){
+
+.card--header:nth-of-type(3) {
     animation-delay: 0.3s;
 }
-.card--header:nth-of-type(4){
+
+.card--header:nth-of-type(4) {
     animation-delay: 0.4s;
 }
-.card--header:nth-of-type(5){
+
+.card--header:nth-of-type(5) {
     animation-delay: 0.5s;
 }
-.card--header:nth-of-type(6){
+
+.card--header:nth-of-type(6) {
     animation-delay: 0.6s;
 }
-.card--header:nth-of-type(2)::after, .card:nth-of-type(4)::after, .card:nth-of-type(6)::after{
+
+.card--header:nth-of-type(2)::after,
+.card:nth-of-type(4)::after,
+.card:nth-of-type(6)::after {
     background: linear-gradient(#49FF00, #77D970);
 
 }
 
-@keyframes coloRotation{
-    from{
+
+.courses {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.courses_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.course {
+    background-color: var(--black);
+    text-align: center;
+    border: 1px solid transparent;
+}
+
+.course:hover {
+    border-color: var(--primary);
+    background: transparent;
+}
+
+.course_info {
+    padding: 2rem;
+}
+
+.course_info p {
+    margin: 1.2rem 0 2rem;
+    font-size: 0.9rem;
+}
+
+@keyframes coloRotation {
+    from {
         filter: hue-rotate(0);
     }
-    to{
+
+    to {
         filter: hue-rotate(1turn);
     }
 }
 
-@keyframes popup{
-    from{
+@keyframes popup {
+    from {
         opacity: 0;
         transform: translateY(2rem);
     }
-    to{
+
+    to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
 
-@media screen and (max-width:37.5rem){
-    .neon{
+@media screen and (max-width:37.5rem) {
+    .neon {
         height: auto;
     }
-    .circle--second{
+
+    .circle--second {
         display: none;
     }
 }
@@ -382,6 +432,7 @@ nav button {
     text-align: center;
     margin-top: -5rem;
 }
+
 
 .verleden_container .cards {
     display: grid;
@@ -608,38 +659,41 @@ nav button {
 }
 
 
+/* filter */
 
-
-*, *::before,*::after{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body filter{
+body filter {
     font-size: 2rem;
     font-family: sans-serif;
     padding: 8rem;
     overflow: hidden;
 }
 
-body::before{
-    background: purple;
+body::before {
+    background: var(--primary);
     animation-delay: 0.3s;
     z-index: 1;
-    
+
 }
 
-body::after{
-    background: pink;
+body::after {
+    background: #2FA4FF;
     z-index: 2;
 }
 
-body::before, body::after{
+body::before,
+body::after {
     content: "";
     height: 100%;
     width: 100%;
@@ -650,10 +704,10 @@ body::before, body::after{
     animation-duration: 1.2s;
     transform-origin: right;
     animation-fill-mode: forwards;
-    animation-timing-function:cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-main{
+main {
     width: 100%;
     opacity: 0;
     animation-fill-mode: forwards;
@@ -662,7 +716,7 @@ main{
     animation-delay: 1s;
 }
 
-.inputs{
+.inputs {
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -672,21 +726,21 @@ main{
     flex-wrap: wrap;
 }
 
-.inputs > div{
+.inputs>div {
     display: flex;
     align-items: center;
     width: 35rem;
 }
 
-.label:hover{
+.label:hover {
     cursor: pointer;
 }
 
-.filter:hover{
+.filter:hover {
     cursor: pointer;
 }
 
-.filter{
+.filter {
     width: 5rem;
     height: 5rem;
     margin-right: 2rem;
@@ -697,16 +751,16 @@ main{
     box-shadow: inset 0 0 0.5rem 0 rgba(0, 0, 0, 0.2);
 }
 
-.filter:checked{
+.filter:checked {
     background: pink;
 
 }
 
-.filter:checked ~ .label{          
+.filter:checked~.label {
     text-decoration: underline;
 }
 
-.projects{
+.projects {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -715,7 +769,7 @@ main{
 
 }
 
-.project{
+.project {
     list-style: none;
     width: 25rem;
     height: 30rem;
@@ -723,35 +777,38 @@ main{
     flex-grow: 1;
 }
 
-.project:hover{
+.project:hover {
     transform: scale(1.02) translateY(-0.7rem);
     cursor: pointer;
 }
 
-.project img{
+.project img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
 @keyframes away {
-    from{
-        transform:scaleX(1);
+    from {
+        transform: scaleX(1);
     }
-    to{
-        transform:scaleX(0);
+
+    to {
+        transform: scaleX(0);
     }
 }
 
-@keyframes popup{
-    from{
+@keyframes popup {
+    from {
         opacity: 0;
     }
-    to{
+
+    to {
         opacity: 1;
     }
 }
 
+/* footer */
 footer {
     padding-top: 5rem;
     background-color: #0c1013f1;
@@ -792,6 +849,64 @@ footer ul li a:hover {
     margin-top: 2rem;
 }
 
+/* spraak */
+
+body .speak {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: monospace;
+    background: var(--achtergrond);
+}
+
+.hide .speak {
+    display: none;
+}
+
+.speak img {
+    width: 25%;
+}
+
+#result .speak {
+    margin-top: 2em;
+    background: #EF476F;
+    border-radius: 10px;
+    padding: 2rem;
+    color: #fff;
+}
+
+button {
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    background: #06D6A0;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: inherit;
+}
+
+
+
+/* top button */
+.top {
+    width: 5rem;
+    height: 5rem;
+    background: #219F94;
+    border: none;
+    font-size: 110%;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.5rem;
+    color: #E9DAC1;
+    position: fixed;
+    bottom: 7.5rem;
+    right: 7.5rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (max-width:1024px) {
     .container {
         width: var(--container-width-md);
@@ -813,7 +928,7 @@ footer ul li a:hover {
         font-size: 1.2rem;
     }
 
-    
+
     .btn {
         padding: 0.3rem 1.2rem;
     }
@@ -858,25 +973,6 @@ footer ul li a:hover {
         color: var(--achtergrond);
         place-items: center;
     }
-
-    .top {
-        width: 5rem;
-        height: 5rem;
-        background:red;
-        border: none;
-        font-size: 150%;
-        font-family: 'Open Sans', sans-serif;
-        border-radius: 5px;
-        color: white;
-        position: fixed;
-        bottom: 7.5rem;
-        right: 7.5rem;
-        text-decoration: none;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-    
 
 
 
@@ -972,9 +1068,6 @@ footer ul li a:hover {
         transform: rotate(5deg);
     }
 
-    .gallerij a {
-        width: 25rem;
-    }
 
     .enter_container {
         grid-template-columns: 1fr;
